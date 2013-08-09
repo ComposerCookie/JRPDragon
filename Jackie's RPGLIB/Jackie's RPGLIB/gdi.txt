@@ -1,0 +1,7 @@
+It is not complicated to use GDI+ at all. Basically, you do all the rendering in the PictureBox's Paint event (I've left a method of it in your TilesetPick in case you don't get what I mean). That method has the PaintEventArgs parameter, which you can use to render stuff.
+
+Basically, to render an image:
+1. REMEMBER, everything is done in the Paint method; Paint method is your Render method.
+2. Create a Bitmap file (in namespace System.Drawing I belive, or System.Drawing.Imaging), you create it passing the path of your image.
+3. Render it using the method's PaintEventArgs (which by default is e).
+4. Example: e.Graphics.DrawImage()
